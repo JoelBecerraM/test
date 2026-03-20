@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+    <!-- PageModel commands -->
+    <command id="SetProductsView" name="SetProductsView">
+        <class-name>mx.intran.ecommerce.command.SetProductsViewCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="SetProductsHowMany" name="SetProductsHowMany">
+        <class-name>mx.intran.ecommerce.command.SetProductsHowManyCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="SetSelectPromotions" name="SetSelectPromotions">
+        <class-name>mx.intran.ecommerce.command.SetSelectPromotionsCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+    <!-- Sesion -->
+    <command id="IniciaSesion" name="IniciaSesion">
+        <class-name>mx.intran.ecommerce.command.IniciaSesionCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <!-- Autopars -->
+    <command id="AutoBusquedaAutopartes" name="AutoBusquedaAutopartes">
+        <class-name>mx.intran.ecommerce.command.AutoBusquedaAutopartesCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="AutopartesAplicacion" name="AutopartesAplicacion">
+        <class-name>mx.intran.ecommerce.command.AutopartesAplicacionCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="AutopartesDescripcion" name="AutopartesDescripcion">
+        <class-name>mx.intran.ecommerce.command.AutopartesDescripcionCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="MarcasAplicaciones" name="MarcasAplicaciones">
+        <class-name>mx.intran.ecommerce.command.MarcasAplicacionesCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="ModelosAplicaciones" name="ModelosAplicaciones">
+        <class-name>mx.intran.ecommerce.command.ModelosAplicacionesCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="Autoparte" name="Autoparte">
+        <class-name>mx.intran.ecommerce.command.AutoparteCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="AutoparteAplicaciones" name="AutoparteAplicaciones">
+        <class-name>mx.intran.ecommerce.command.AutoparteAplicacionesCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="AgregaAutoparteAlCarrito" name="AgregaAutoparteAlCarrito">
+        <class-name>mx.intran.ecommerce.command.AgregaAutoparteAlCarritoCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="ObtenCarrito" name="Obten el Carrito de Compra">
+        <class-name>mx.intran.ecommerce.command.ObtenCarritoCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="GuardaCarrito" name="Guarda el Carrito de Compra">
+        <class-name>mx.intran.ecommerce.command.GuardaCarritoCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="BorraCarrito" name="Borra el Carrito de Compra">
+        <class-name>mx.intran.ecommerce.command.BorraCarritoCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+
+    <!-- -->
+    <command id="Registro" name="Obtiene el registro">
+        <class-name>com.atcloud.web.command.RegistroCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="Catalogos" name="Obtiene los registros de Catalogos">
+        <class-name>com.atcloud.web.command.CatalogosCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="MaestroDetalle" name="Obtiene los registros de Maestro Detalle">
+        <class-name>com.atcloud.web.command.MaestroDetalleCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="Lista" name="Obtiene una Lista de Registros">
+        <class-name>com.atcloud.web.command.ListaCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="Coleccion" name="Obtiene una Coleccion">
+        <class-name>com.atcloud.web.command.ColeccionCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="Accion" name="Ejecuta una Accion">
+        <class-name>com.atcloud.web.command.AccionCommand</class-name>
+        <content-type>application/json</content-type>
+    </command>
+</commands>

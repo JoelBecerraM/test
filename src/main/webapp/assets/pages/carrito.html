@@ -1,0 +1,98 @@
+<!-- Start Page Banner -->
+<!-- div class="page-banner-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-banner-content">
+                    <h2>Cart</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div -->
+<!-- End Page Banner -->
+
+<!-- Start Cart Area -->
+<section class="cart-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <form>
+                    <div class="cart-table table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Descripci&oacute;n</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="products">
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row text-right">
+            <div class="col-lg-8 col-md-6">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#" class="default-btn" onclick="subirCarrito(); return false;">
+                            <i class="bx bx-upload fs-5"></i> Subir Pedido
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div class="justify-content-center mt-4">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="switch-promociones" name="promociones">
+                                <label class="form-check-label" for="promociones">&nbsp;&nbsp;&nbsp;Elegir Promociones</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row invisible" id="div-subir">
+                    <form id="form-subir" novalidate action="CargaInformacion">
+                        <input type="hidden" name="compania">
+                        <input type="hidden" name="usuario">
+                        <input type="hidden" name="tipo" value="cargaPedido">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Archivo:</label>
+                                    <input type="file" name="archivo" id="archivo" class="form-control" required placeholder="Archivo"
+                                           data-error="Por favor ingrese el archivo.">
+                                    <div class="help-block with-errors mt-1 h6 text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="default-btn">
+                                    <i class="bx bx-upload fs-5"></i> Procesar Archivo
+                                </button>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="cart-totals">
+                    <h3>Totales</h3>
+                    <ul>
+                        <li>Subtotal <span id="subtotal">$0.00</span></li>
+                        <li>IVA <span id="iva">$0.00</span></li>
+                        <li style="font-size: 18px;">Total <span style="font-weight: 600;" id="total">$0.00</span></li>
+                        <li>Ahorro <span id="ahorro">$0.00</span></li>
+                    </ul>
+                    <a href="#" class="default-btn" onclick="vistaComprar(); return false;">
+                        <i class="bx bx-shopping-bag fs-5"></i> Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Cart Area -->

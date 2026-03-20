@@ -1,0 +1,154 @@
+<!-- Start Page Banner -->
+<!-- div class="page-banner-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-banner-content">
+                    <h2>Admin Clientes</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div -->
+<!-- End Page Banner -->
+
+<!-- Start Admin Clientes Area -->
+<section class="cart-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block-header block-header-default mb-4">
+                    <h3 class="block-title">Clientes <!-- small>Subtitle</small --></h3>
+                </div>
+                <div class="shop-item-box">
+                    <form id="form-datos">
+                        <div class="row mb-4">
+                            <div class="col-sm-12">
+                                <label class="form-label">Compa&ntilde;ia</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend w-md-30 col-lg-2">
+                                        <input type="text" class="form-control key-input" name="compania" disabled required>
+                                    </div>
+                                    <div class="w-md-70 col-lg-10">
+                                        <input type="text" class="form-control" name="razonsocial" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-4">
+                                    <div class="input-group">
+                                        <span id="buscar-span" class="input-group-text w-md-20 col-lg-1 justify-content-center cursor-pointer">
+                                            <i class="bx bx-search"></i>
+                                        </span>
+                                        <div class="form-floating w-md-80 col-lg-11">
+                                            <input type="text" class="form-control" id="cliente" name="cliente" placeholder="Cliente" required autocomplete="off">
+                                            <label class="form-label" for="cliente">Cliente</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required autocomplete="off">
+                                    <label class="form-label" for="nombre">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-12">
+                                <div class="form-floating mb-4">
+                                    <select class="form-select" id="lista" name="lista" required aria-label="Select example">
+                                        <option></option>
+                                        <option value="pre_naranja">LISTA_NARANJA</option>
+                                        <option value="pre_verde">LISTA_VERDE</option>
+                                        <option value="pre_morada">LISTA_MORADA</option>
+                                        <option value="pre_azul">LISTA_AZUL</option>
+                                        <option value="pre_roja">LISTA_ROJA</option>
+                                        <option value="pre_cafe">LISTA_CAFE</option>
+                                        <option value="pre_rosa">LISTA_ROSA</option>
+                                        <option value="pre_amarilla">LISTA_AMARILLA</option>
+                                        <option value="pre_azulmarino">LISTA_AZUL MARINO</option>
+                                    </select>
+                                    <label class="form-label" for="lista">Lista de Precio</label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="idvendedor" name="idvendedor" placeholder="ID Vendedor" required autocomplete="off">
+                                    <label class="form-label" for="idvendedor">ID Vendedor</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="vendedor" name="vendedor" placeholder="Vendedor" required autocomplete="off">
+                                    <label class="form-label" for="vendedor">Vendedor</label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="idgerenteregional" name="idgerenteregional" placeholder="ID Gerente Regional" required autocomplete="off">
+                                    <label class="form-label" for="idgerenteregional">ID Gerente Regional</label>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="gerenteregional" name="gerenteregional" placeholder="Gerente Regional" required autocomplete="off">
+                                    <label class="form-label" for="gerenteregional">Gerente Regional</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="gerentenacional" name="gerentenacional" placeholder="Gerente Nacional" required autocomplete="off">
+                                    <label class="form-label" for="gerentenacional">Gerente Nacional</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="entidadfederativa" name="entidadfederativa" placeholder="Entidad Federativa" required autocomplete="off">
+                                    <label class="form-label" for="entidadfederativa">Entidad Federativa</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="codigopostal" name="codigopostal" placeholder="C&oacute;digo Postal" required autocomplete="off">
+                                    <label class="form-label" for="codigopostal">C&oacute;digo Postal</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="correoelectronico" name="correoelectronico" placeholder="Correo Electr&oacute;nico" required autocomplete="off">
+                                    <label class="form-label" for="correoelectronico">Correo Electr&oacute;nico</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <hr>
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="justify-content-center text-end">
+                                <button type="button" class="btn btn-outline-primary" id="btn-regresar" onclick="window.history.back();">
+                                    <span class="bx bx-rewind" aria-hidden="true"></span>&nbsp;Regresar
+                                </button>
+                                <button type="button" class="btn btn-outline-primary" id="btn-limpiar">
+                                    <span class="bx bx-eraser" aria-hidden="true"></span>&nbsp;Limpiar
+                                </button>
+                                <div class="d-sm-none mb-1">
+                                </div>
+                                <button type="button" class="btn btn-outline-primary" id="btn-guardar">
+                                    <span class="bx bx-save" aria-hidden="true"></span>&nbsp;Guardar
+                                </button>
+                                <button type="button" class="btn btn-outline-primary" id="btn-borrar">
+                                    <span class="bx bx-trash" aria-hidden="true"></span>&nbsp;Borrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="notify-div" class="block-content block-content-full block-content-sm bg-body-light fs-sm">
+                    Listo.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Admin Clientes Area -->

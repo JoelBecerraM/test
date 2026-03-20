@@ -1,0 +1,272 @@
+<!-- Start Top Header Area -->
+<div class="top-header-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <ul class="top-header-information">
+                    <li>
+                        <i class="flaticon-phone-call"></i>
+                         +52 (777) 352-7728
+                    </li>
+                    <li>
+                        <a href="mailto:telemarketing@intran.com.mx" style="color: white !important;">
+                            <i class="flaticon-email"></i>telemarketing@intran.com.mx
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <ul class="top-header-optional">
+                    <li>Moneda: <b>MXN</b></li>
+                    <li>
+                        <div class="dropdown language-switcher d-inline-block">
+                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span>Language <i class='bx bx-chevron-down'></i></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <!-- a href="#" class="dropdown-item d-flex align-items-center">
+                                    <img src="/ecommerce/assets/img/english.png" class="shadow-sm" alt="flag">
+                                    <span>Espa&ntilde;ol</span>
+                                </a -->
+                                <a href="#" class="dropdown-item d-flex align-items-center">
+                                    <img src="/ecommerce/assets/img/english.png" class="shadow-sm" alt="flag">
+                                    <span>English</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Top Header Area -->
+
+<!-- Start Middle Header Area -->
+<div class="middle-header-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-2">
+                <div class="middle-header-logo">
+                    <a href="/ecommerce">
+                        <img src="/ecommerce/assets/img/logo-3.png" alt="logo" height="40">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="middle-header-search">
+                    <form class="form-search" id="form-search">
+                        <label>
+                            <span class="screen-reader-text">Search for:</span>
+                            <input id="search" name="search" type="search" class="search-field" placeholder="B&uacute;squeda Universal de Autopartes" autocomplete="off">
+                        </label>
+                        <button onclick="busquedaAutopartesUniversal(); return false;">
+                            <i class='bx bx-search-alt'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <ul class="middle-header-optional">
+                    <!-- li>
+                        <a href="wishlist.html"><i class="flaticon-heart"><span>0</span></i> Wishlist</a>
+                    </li -->
+                    <%
+                        if (loggeado) {
+                    %>
+                    <li>
+                        <a href="#" onclick="vistaCarrito(); return false;"><i class="flaticon-shopping-cart"><span id="total-carrito">0</span></i> Carrito</a>
+                    </li>
+                    <li>
+                        <a href="#" class="user-btn" onclick="cerrarSesion(); return false;"><i class='flaticon-clock'></i>Cerrar Sesi&oacute;n</a>
+                    </li>
+                    <%
+                        } else {
+                    %>
+                    <li>
+                        <a href="#" class="user-btn" onclick="vistaLogin(); return false;"><i class='flaticon-enter'></i>Iniciar Sesi&oacute;n</a>
+                    </li>
+                    <%
+                        }
+                    %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Middle Header Area -->
+
+<!-- Start Navbar Area -->
+<div class="navbar-area navbar-two">
+    <div class="main-responsive-nav">
+        <div class="container">
+            <div class="main-responsive-menu">
+                <div class="logo">
+                    <a href="/ecommerce">
+                        <img src="/ecommerce/assets/img/logo.png" alt="image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-navbar">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <!-- li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Home
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link">
+                                        Home One
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="index-2.html" class="nav-link">
+                                        Home Two
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="index-3.html" class="nav-link">
+                                        Home Three
+                                    </a>
+                                </li>
+                            </ul>
+                        </li -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                P&aacute;ginas
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaAcercaDe(); return false;">
+                                        Acerca De
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaMiCuenta(); return false;">
+                                        Mi Cuenta
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaPreguntasFrecuentes(); return false;">
+                                        FAQ
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaTerminosDeServicio(); return false;">
+                                        T&eacute;rminos de Servicio
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaPoliticaDePrivacidad(); return false;">
+                                        Pol&iacute;tica de Privacidad
+                                    </a>
+                                </li>
+                                <!-- li class="nav-item">
+                                    <a href="/ecommerce/assets/pages/error-404.jsp" class="nav-link">
+                                        Error Page
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/ecommerce/assets/pages/coming-soon.jsp" class="nav-link">
+                                        Coming Soon
+                                    </a>
+                                </li -->
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Comprar
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaInicio(); return false;">
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="pageModel['pagina'] = 0; pageModel['noparte'] = ''; pageModel['valor'] = '';
+                                        pageModel['anio'] = ''; pageModel['marca'] = ''; pageModel['modelo'] = ''; pageModel['motor'] = ''; pageModel['linea'] = '';
+                                        vistaProductos(); return false;">
+                                        Productos
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="pageModel.noparte = 'SD11000'; vistaProductoDetalle(); return false;">
+                                        Detalles Producto
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaCarrito(); return false;">
+                                        Carrito
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaComprar(); return false;">
+                                        Comprar
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaSegimientoPedido(); return false;">
+                                        Seguimiento Pedido
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Administraci&oacute;n
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaAdminClientes(); return false;">
+                                        Clientes
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaAdminUsuarios(); return false;">
+                                        Usuarios
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaAdminPerfiles(); return false;">
+                                        Perfiles
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" onclick="vistaAdminPermisos(); return false;">
+                                        Permisos
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" onclick="vistaContacto(); return false;">
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- div class="others-option d-flex align-items-center">
+                        <div class="option-item">
+                            <span>
+                                Hotline:
+                                <a href="tel:882563789966">(+882) 563 789 966</a>
+                            </span>
+                        </div>
+                    </div -->
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Navbar Area -->

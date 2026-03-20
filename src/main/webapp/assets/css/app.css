@@ -1,0 +1,241 @@
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.invisible {
+    display: none;
+    visibility: collapse;
+}
+.visible {
+    display: block;
+    visibility: visible;
+}
+
+@media only screen and (max-width: 768px) {
+    .w-md-20 {
+        width: 20%
+    }
+    .w-md-30 {
+        width: 30%
+    }
+    .w-md-60 {
+        width: 60%
+    }
+    .w-md-70 {
+        width: 70%
+    }
+    .w-md-80 {
+        width: 80%
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+.dark-mode .modal-content {
+    background-color: #1e2229;
+}
+.dark-mode .modal-content .modal-header,
+.dark-mode .modal-content .modal-footer {
+    border-color: #424242;
+}
+.dark-mode .form-control {
+    background-color: #282d36;
+    border-color: #282d36;
+}
+
+/*dark-mode overrides*/
+.dark-mode .img-logo {
+    background-color: whitesmoke;
+}
+.dark-mode .modal-content {
+    background-color: #000000 !important;
+}
+.dark-mode .bg-info-light {
+    color: black;
+    background-color: #f8f9fa !important;
+}
+.dark-mode .bg-warning-light {
+    color: black;
+    background-color: #ced4da !important;
+}
+.dark-mode .bg-danger-light {
+    color: black;
+    background-color: #495057 !important;
+}
+.swal2-popup-dark-mode {
+    color: #d9d9d9;
+    background-color: #000000 !important;
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+}
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #001ca8;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 400px;
+    overflow-y: scroll;
+    color: #000000 !important;
+    background-color: #fff;
+}
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #001ca8;
+}
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #fdb930;
+}
+
+.svg-image {
+    color: currentColor;
+}
+
+figure.zoom {
+    background-position: 50% 50%;
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+figure.zoom img:hover {
+    opacity: 0;
+}
+figure.zoom img {
+    transition: opacity .5s;
+    display: block;
+    width: 100%;
+}
+
+.pre_naranja {
+    color: orange !important;
+}
+.pre_verde {
+    color: green !important;
+}
+.pre_morada {
+    color: purple !important;
+}
+.pre_azul {
+    color: blue !important;
+}
+.pre_roja {
+    color: red !important;
+}
+.pre_cafe {
+    color: brown !important;
+}
+.pre_rosa {
+    color: pink !important;
+}
+.pre_amarilla {
+    color: yellow !important;
+}
+.pre_azulmarino {
+    color: #055160 !important;
+}
+
+
+.pre_naranja_background {
+    background: orange !important;
+}
+.pre_verde_background {
+    background: green !important;
+}
+.pre_morada_background {
+    background: purple !important;
+}
+.pre_azul_background {
+    background: blue !important;
+}
+.pre_roja_background {
+    background: red !important;
+}
+.pre_cafe_background {
+    background: brown !important;
+}
+.pre_rosa_background {
+    background: pink !important;
+}
+.pre_amarilla_background {
+    background: yellow !important;
+}
+.pre_azulmarino_background {
+    background: #055160 !important;
+}
+
+.color-principal {
+    color: #001ca8 !important;
+}
+.color-secundario {
+    color: #fdb930 !important;
+}
+
+/*
+/ https://getbootstrap.com/docs/5.0/layout/grid/
+*/
+
+.cart-table table tbody tr td.product-name {
+    max-width: 630px;
+    min-width: 630px;
+    vertical-align: middle;
+    color: #6e727f;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 35px 0 35px 0;
+    text-align: center;
+    white-space: pre-line;
+}
+
+@media only screen and (max-width: 960px) {
+    .cart-table table tbody tr td.product-name {
+        max-width: 430px;
+        min-width: 430px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .cart-table table tbody tr td.product-name {
+        max-width: 330px;
+        min-width: 330px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .cart-table table tbody tr td.product-name {
+        max-width: 230px;
+        min-width: 230px;
+    }
+}
+
+em.error {
+    color: red;
+    white-space: nowrap;
+    padding-left: 5px;
+}
+em.success {
+    color: #6e727f;
+    white-space: nowrap;
+    padding-left: 5px;
+}
+
+.bg-body-light {
+    background-color: #fdb930;
+    border: 3px solid #6e727f;
+}
+.puntero {
+    cursor: pointer;
+}

@@ -1,0 +1,5 @@
+#/bin/bash
+
+/usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR intran < intran-ecommerce.ddl
+/usr/local/mysql/bin/mysql -u ecommerce -pEC\$89yeR intran < init-ecommerce.sql
+

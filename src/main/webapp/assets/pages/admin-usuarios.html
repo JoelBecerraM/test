@@ -1,0 +1,169 @@
+<!-- Start Page Banner -->
+<!-- div class="page-banner-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-banner-content">
+                    <h2>Admin Users</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div -->
+<!-- End Page Banner -->
+
+<!-- Start Admin Users Area -->
+<section class="cart-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block-header block-header-default mb-4">
+                    <h3 class="block-title">Usuarios <!-- small>Subtitle</small --></h3>
+                </div>
+                <div class="shop-item-box">
+                    <form id="form-datos">
+                        <div class="row mb-4">
+                            <div class="col-sm-12">
+                                <label class="form-label">Compa&ntilde;ia</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend w-md-30 col-lg-2">
+                                        <input type="text" class="form-control key-input" name="compania" disabled required>
+                                    </div>
+                                    <div class="w-md-70 col-lg-10">
+                                        <input type="text" class="form-control" name="razonsocial" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-4">
+                                    <div class="input-group">
+                                        <span id="buscar-span" class="input-group-text w-md-20 col-lg-1 justify-content-center cursor-pointer">
+                                            <i class="bx bx-search"></i>
+                                        </span>
+                                        <div class="form-floating w-md-80 col-lg-11">
+                                            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required autocomplete="off">
+                                            <label class="form-label" for="usuario">Usuario</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required autocomplete="off">
+                                    <label class="form-label" for="nombre">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="input-group mb-4">
+                                    <div class="form-floating w-md-80 col-lg-10">
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Contrase&ntilde;a" required autocomplete="off">
+                                        <label class="form-label" for="password">* Contrase&ntilde;a</label>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-secondary"
+                                            onclick="togglePassword('password');">
+                                        <i class="bx bx-edit"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-floating mb-4">
+                                    <select class="form-select" id="perfil" name="perfil" required aria-label="Perfil">
+                                        <option></option>
+                                    </select>
+                                    <label class="form-label" for="perfil">Perfil</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-4">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Correo Electr&oacute;nico" required autocomplete="off">
+                                    <label class="form-label" for="email">Correo Electr&oacute;nico</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-floating mb-4">
+                                    <select class="form-select" id="estado" name="estado" required aria-label="Select example">
+                                        <option></option>
+                                        <option value="A">Activo</option>
+                                        <option value="B">Baja</option>
+                                    </select>
+                                    <label class="form-label" for="estado">Estado</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="cambiopassword" name="cambiopassword" placeholder="Cambio Contrase&ntilde;a" required autocomplete="off">
+                                    <label class="form-label" for="cambiopassword">Cambio Contrase&ntilde;a</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="cliente" name="cliente" placeholder="Cliente" required autocomplete="off">
+                                    <label class="form-label" for="cliente">Cliente</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="avatar" name="avatar" readonly required>
+                                    <label class="form-label" for="avatar">Avatar</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 text-center">
+                                <div class="form-floating mb-4">
+                                    <img id="avatar-img" src="" alt="Avatar" width="80" height="80">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 text-center">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" id="btnGroupDropAvatars"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cambia Avatar</button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDropAvatars">
+                                        <a class="dropdown-item" href="javascript:void(0)" onclick="seleccionaAvatar('01');">
+                                            <img src="assets/img/avatars/avatars-01.png" alt="Avatar" width="40" height="40"> 01
+                                        </a>
+                                        <a class="dropdown-item" href="javascript:void(0)" onclick="seleccionaAvatar('02');">
+                                            <img src="assets/img/avatars/avatars-02.png" alt="Avatar" width="40" height="40"> 02
+                                        </a>
+                                        <!-- div class="dropdown-divider"></div -->
+                                        <a class="dropdown-item" href="javascript:void(0)" onclick="seleccionaAvatar('03');">
+                                            <img src="assets/img/avatars/avatars-03.png" alt="Avatar" width="40" height="40"> 03
+                                        </a>
+                                        <a class="dropdown-item" href="javascript:void(0)" onclick="seleccionaAvatar('04');">
+                                            <img src="assets/img/avatars/avatars-04.png" alt="Avatar" width="40" height="40"> 04
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <hr>
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="justify-content-center text-end">
+                                <button type="button" class="btn btn-outline-primary" id="btn-regresar" onclick="window.history.back();">
+                                    <span class="bx bx-rewind" aria-hidden="true"></span>&nbsp;Regresar
+                                </button>
+                                <button type="button" class="btn btn-outline-primary" id="btn-limpiar">
+                                    <span class="bx bx-eraser" aria-hidden="true"></span>&nbsp;Limpiar
+                                </button>
+                                <div class="d-sm-none mb-1">
+                                </div>
+                                <button type="button" class="btn btn-outline-primary" id="btn-guardar">
+                                    <span class="bx bx-save" aria-hidden="true"></span>&nbsp;Guardar
+                                </button>
+                                <button type="button" class="btn btn-outline-primary" id="btn-borrar">
+                                    <span class="bx bx-trash" aria-hidden="true"></span>&nbsp;Borrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="notify-div" class="block-content block-content-full block-content-sm bg-body-light fs-sm">
+                    Listo.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Admin Users Area -->

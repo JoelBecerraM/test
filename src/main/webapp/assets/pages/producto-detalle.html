@@ -1,0 +1,113 @@
+<!-- Start Products Details Area -->
+<section class="products-details-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="products-details-desc">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="main-products-image" id="images">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="product-content">
+                                <h3 id="descripcion"></h3>
+                                <p id="descripcionlarga"></p>
+                                <div class="loggeado price">
+                                    <span>Precio:</span>
+                                    <span class="new-price" id="precio"></span>
+                                </div>
+                                <div class="loggeado price" id="promocion">
+                                    <span>Promoci&oacute;n:</span>
+                                    <span class="old-price" id="preciopromocion"></span>&nbsp;
+                                    <span class="new-price" id="promocionnormal"></span>&nbsp;&nbsp;
+                                    <span class="new-price" id="promocionespecial"></span>
+                                </div>
+                                <div class="loggeado ver-precios">
+                                    <div class="mt-4">
+                                        <h5>Precios</h5>
+                                    </div>
+                                    <div class="product-quantities" id="precios">
+                                    </div>
+                                </div>
+                                <div class="product-quantities">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4">
+                                            <span>Familia:</span>
+                                            <br><a onclick="return false;" id="familia"></a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            <span>L&iacute;nea:</span>
+                                            <br><a onclick="return false;" id="linea"></a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            <span>Sistema:</span>
+                                            <br><a onclick="return false;" id="sistema"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="products-info">
+                                    <li class="loggeado"><span>Disponibilidad:</span> <a onclick="return false;" id="disponibilidad"></a></li>
+                                    <li><span>NoParte:</span> <a onclick="return false;" id="noparte"></a></li>
+                                </ul>
+                                <div class="mt-4">
+                                    <h5>Especificaciones T&eacute;cnicas</h5>
+                                </div>
+                                <div class="product-quantities" id="especificaciones">
+                                </div>
+                                <div class="loggeado">
+                                    <div class="product-quantities mt-4">
+                                        <span>Cantidad:</span>
+                                        <div class="input-counter">
+                                            <span class="minus-btn" onclick="agregaCantidad('', -1); return false;">
+                                                <i class='bx bx-minus'></i>
+                                            </span>
+                                            <input type="text" value="1" id="cantidad">
+                                            <span class="plus-btn" onclick="agregaCantidad('', 1); return false;">
+                                                <i class='bx bx-plus'></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="product-add-to-cart">
+                                        <button type="submit" class="default-btn"
+                                                onclick="agregaProductoAlCarrito('', pageModel['noparte']); return false;">
+                                            <i class="flaticon-shopping-cart"></i>
+                                            Agregar al Carrito
+                                            <span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-details-tabs">
+                    <div class="product-add-to-cart">
+                        <button class="default-btn"
+                                onclick="buscaAplicaciones(pageModel['noparte']); return false;">
+                            <i class="flaticon-award"></i>
+                            Aplicaciones
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="product-content mt-4" id="aplicaciones">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Products Details Area -->
+
+<!-- Start Top Products Area -->
+<section class="top-products-area bg-color pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <h2>Productos Relacionados</h2>
+        </div>
+        <div class="row mb-2" id="products">
+            <!-- -->
+        </div>
+    </div>
+</section>
+<!-- End Top Products Area -->

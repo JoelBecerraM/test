@@ -1,0 +1,65 @@
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/bootstrap.min.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/animate.min.css">
+        <!-- Meanmenu CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/meanmenu.css">
+        <!-- Boxicons CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/boxicons.min.css">
+        <!-- Flaticon CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/flaticon.css">
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/owl.carousel.min.css">
+        <!-- Owl Theme Default CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/owl.theme.default.min.css">
+        <!-- Odometer CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/odometer.min.css">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/nice-select.min.css">
+        <!-- Select2 CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/select2.min.css">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/magnific-popup.min.css">
+        <!-- Imagelightbox CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/imagelightbox.min.css">
+        <!-- DataTable CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/dataTables.bootstrap5.min.css">
+        <!-- Sweetalert CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/sweetalert2.min.css">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/style.css">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/responsive.css">
+        <!-- App CSS -->
+        <link rel="stylesheet" href="/ecommerce/assets/css/app.css">
+
+	<title>Intran - Autopartes</title>
+        <link rel="icon" type="image/png" href="/ecommerce/assets/img/favicon.png">
+
+        <script type="text/javascript">
+            var index = "index.jsp";
+            var loggeado = <%=loggeado%>;
+            var mobile = false;
+            var darkmode = false;
+            var usuario = {
+            <%
+    Field[] fields = usuario.getClass().getDeclaredFields();
+    for (Field field : fields) {
+        Object value = field.get(usuario);
+        String comillas = value instanceof String ? "\"" : "";
+        out.write("                " + field.getName() + ": " + comillas + value + comillas + ",\n");
+    }
+            %>
+            };
+            var pageModel = {
+                productsView: <%=pageModel.productsView%>,
+                productsHowMany: <%=pageModel.productsHowMany%>,
+                selectPromotions: <%=pageModel.selectPromotions%>
+            };
+            var elCarrito;
+        </script>
+    </head>
