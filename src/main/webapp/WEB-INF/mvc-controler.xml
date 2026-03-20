@@ -47,6 +47,16 @@
         <session-less>true</session-less>
         <content-type>application/json</content-type>
     </command>
+    <command id="MotoresAplicaciones" name="MotoresAplicaciones">
+        <class-name>mx.intran.ecommerce.command.MotoresAplicacionesCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
+    <command id="LineasAplicaciones" name="LineasAplicaciones">
+        <class-name>mx.intran.ecommerce.command.LineasAplicacionesCommand</class-name>
+        <session-less>true</session-less>
+        <content-type>application/json</content-type>
+    </command>
     <command id="Autoparte" name="Autoparte">
         <class-name>mx.intran.ecommerce.command.AutoparteCommand</class-name>
         <session-less>true</session-less>

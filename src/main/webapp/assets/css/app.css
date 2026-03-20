@@ -239,3 +239,20 @@ em.success {
 .puntero {
     cursor: pointer;
 }
+
+@keyframes loading {
+    0% {
+        opacity: .3;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: .3;
+    }
+}
+
+[inert] > * {
+    animation: loading 1s forwards infinite linear;
+    opacity: .3;
+}

@@ -26,6 +26,38 @@ function limpiaSeleccion($select, placeholder) {
         $select.select2({placeholder: placeholder, allowClear: true});
 }
 
+function cambioSeleccionLinea() {
+    var $select = $("#select-anio");
+    var anio = $select.val();
+    var $select = $("#select-marca");
+    var marca = $select.val();
+    var $select = $("#select-modelo");
+    var modelo = $select.val();
+    var $select = $("#select-motor");
+    var motor = $select.val();
+    var $select = $("#select-linea");
+    var linea = $select.val();
+
+    if (anio!==""&&marca!=""&&modelo!==""&&motor!==""&&linea!=="")
+        busquedaAutopartesAplicacionesII(anio, marca, modelo, motor, linea);
+}
+
+function cambioSeleccionMotor() {
+    var $select = $("#select-anio");
+    var anio = $select.val();
+    var $select = $("#select-marca");
+    var marca = $select.val();
+    var $select = $("#select-modelo");
+    var modelo = $select.val();
+    var $select = $("#select-motor");
+    var motor = $select.val();
+
+    limpiaSeleccion($("#select-linea"));
+
+    if (anio!==""&&marca!=""&&modelo!==""&&motor!=="")
+        buscaLineasAplicaciones(anio, marca, modelo, motor);
+}
+
 function cambioSeleccionModelo() {
     var $select = $("#select-anio");
     var anio = $select.val();
@@ -68,22 +100,24 @@ function cambioSeleccionAnio() {
         buscaMarcasAplicaciones(anio);
 }
 
-function buscaMotoresAplicaciones(anio, marca, modelo) {
-    console.log("buscaMotoresAplicaciones()", anio, marca, modelo);
+function buscaLineasAplicaciones(anio, marca, modelo, motor) {
+    var $select = $("#select-linea");
+    $select.parent().attr("inert", true);
 
-    /*
     var data = {
         compania: usuario.compania,
         usuario: usuario.usuario,
         anio: anio,
         marca: marca,
-        id: "ModelosAplicaciones"
+        modelo: modelo,
+        motor: motor,
+        id: "LineasAplicaciones"
     };
 
     var onAceptar = function() {
     };
     var onFail = function(err) {
-        var msg = "Error al buscar los Modelos.<br><br><b>("+err.status+") "+err.statusText+"</b>";
+        var msg = "Error al buscar los Lineas.<br><br><b>("+err.status+") "+err.statusText+"</b>";
         error(msg);
     };
     var onError = function(response) {
@@ -94,14 +128,49 @@ function buscaMotoresAplicaciones(anio, marca, modelo) {
         }
     };
     var onComplete = function(response) {
-        inicializaBusquedaModelo(response);
+        inicializaBusquedaLinea(response);
     };
 
     mvc_wwm(data, onComplete, onFail, onError);
-     */
+}
+
+function buscaMotoresAplicaciones(anio, marca, modelo) {
+    var $select = $("#select-motor");
+    $select.parent().attr("inert", true);
+
+    var data = {
+        compania: usuario.compania,
+        usuario: usuario.usuario,
+        anio: anio,
+        marca: marca,
+        modelo: modelo,
+        id: "MotoresAplicaciones"
+    };
+
+    var onAceptar = function() {
+    };
+    var onFail = function(err) {
+        var msg = "Error al buscar los Motores.<br><br><b>("+err.status+") "+err.statusText+"</b>";
+        error(msg);
+    };
+    var onError = function(response) {
+        if (response.exception.indexOf("WebException")!==-1) {
+            warning(response.mensaje);
+        } else {
+            error(response.exception);
+        }
+    };
+    var onComplete = function(response) {
+        inicializaBusquedaMotor(response);
+    };
+
+    mvc_wwm(data, onComplete, onFail, onError);
 }
 
 function buscaModelosAplicaciones(anio, marca) {
+    var $select = $("#select-modelo");
+    $select.parent().attr("inert", true);
+
     var data = {
         compania: usuario.compania,
         usuario: usuario.usuario,
@@ -131,6 +200,9 @@ function buscaModelosAplicaciones(anio, marca) {
 }
 
 function buscaMarcasAplicaciones(anio) {
+    var $select = $("#select-marca");
+    $select.parent().attr("inert", true);
+
     var data = {
         compania: usuario.compania,
         usuario: usuario.usuario,
@@ -158,6 +230,32 @@ function buscaMarcasAplicaciones(anio) {
     mvc_wwm(data, onComplete, onFail, onError);
 }
 
+function inicializaBusquedaLinea(response) {
+    var $select = $("#select-linea");
+    $select.empty();
+    $select.append($("<option></option>").attr("value","").text(""));
+    for (var i=0; i<response.length; i++) {
+        $select.append($("<option></option>").attr("value",""+response[i].linea).text(response[i].descripcion));
+    }
+    $select.select2({placeholder: "Linea", allowClear: true});
+    $select.trigger("change");
+
+    $select.parent().removeAttr("inert");
+}
+
+function inicializaBusquedaMotor(response) {
+    var $select = $("#select-motor");
+    $select.empty();
+    $select.append($("<option></option>").attr("value","").text(""));
+    for (var i=0; i<response.length; i++) {
+        $select.append($("<option></option>").attr("value",""+response[i].motor).text(response[i].descripcion));
+    }
+    $select.select2({placeholder: "Motor", allowClear: true});
+    $select.trigger("change");
+
+    $select.parent().removeAttr("inert");
+}
+
 function inicializaBusquedaModelo(response) {
     var $select = $("#select-modelo");
     $select.empty();
@@ -167,6 +265,8 @@ function inicializaBusquedaModelo(response) {
     }
     $select.select2({placeholder: "Modelo", allowClear: true});
     $select.trigger("change");
+
+    $select.parent().removeAttr("inert");
 }
 
 function inicializaBusquedaMarca(response) {
@@ -178,6 +278,8 @@ function inicializaBusquedaMarca(response) {
     }
     $select.select2({placeholder: "Marca", allowClear: true});
     $select.trigger("change");
+
+    $select.parent().removeAttr("inert");
 }
 
 function inicializaBusquedaAño() {
@@ -194,20 +296,30 @@ function inicializaBusquedaAño() {
 }
 
 function busquedaAutopartesAplicaciones() {
+    var $select = $("#select-anio");
+    var anio = $select.val();
+    var $select = $("#select-marca");
+    var marca = $select.val();
+    var $select = $("#select-modelo");
+    var modelo = $select.val();
+    var $select = $("#select-motor");
+    var motor = $select.val();
+    var $select = $("#select-linea");
+    var linea = $select.val();
+
+    busquedaAutopartesAplicacionesII(anio, marca, modelo, motor, linea);
+}
+
+function busquedaAutopartesAplicacionesII(anio, marca, modelo, motor, linea) {
     pageModel["pagina"] = 0;
     pageModel["noparte"] = "";
     pageModel["valor"] = "";
 
-    var $select = $("#select-anio");
-    pageModel["anio"] = $select.val();
-    var $select = $("#select-marca");
-    pageModel["marca"] = $select.val();
-    var $select = $("#select-modelo");
-    pageModel["modelo"] = $select.val();
-    var $select = $("#select-motor");
-    pageModel["motor"] = $select.val();
-    var $select = $("#select-linea");
-    pageModel["linea"] = $select.val();
+    pageModel["anio"] = anio;
+    pageModel["marca"] = marca;
+    pageModel["modelo"] = modelo;
+    pageModel["motor"] = motor;
+    pageModel["linea"] = linea;
 
     vistaProductos();
 }
