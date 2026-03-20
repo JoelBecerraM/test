@@ -1,5 +1,7 @@
 package mx.intran.ecommerce.to;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author joelbecerramiranda
@@ -20,18 +22,16 @@ public class AutoparteTO {
     public String litros = "";
     public String volts = "";
     public String amperaje = "";
-    public String agrupador = "";
-    public String origen = "";
-    public Double pre_naranja = 0.0d;
-    public Double pre_verde = 0.0d;
-    public Double pre_morada = 0.0d;
-    public Double pre_azul = 0.0d;
-    public Double pre_roja = 0.0d;
-    public Double pre_cafe = 0.0d;
-    public Double pre_rosa = 0.0d;
-    public Double pre_amarilla = 0.0d;
-    public Double pre_azulmarino = 0.0d;
-    public Double pro_normal = 0.0d;
-    public Double pro_especial = 0.0d;
+    public BigDecimal pre_naranja = BigDecimal.ZERO;
+    public BigDecimal pre_verde = BigDecimal.ZERO;
+    public BigDecimal pre_morada = BigDecimal.ZERO;
+    public BigDecimal pre_azul = BigDecimal.ZERO;
+    public BigDecimal pre_roja = BigDecimal.ZERO;
+    public BigDecimal pre_cafe = BigDecimal.ZERO;
+    public BigDecimal pre_rosa = BigDecimal.ZERO;
+    public BigDecimal pre_amarilla = BigDecimal.ZERO;
+    public BigDecimal pre_azulmarino = BigDecimal.ZERO;
+    public BigDecimal pro_normal = BigDecimal.ZERO;
+    public BigDecimal pro_especial = BigDecimal.ZERO;
     public Integer existencia = 0;
 }

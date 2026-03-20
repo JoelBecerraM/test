@@ -109,9 +109,9 @@ function dibujaProducto(response) {
         $div.append($divPrecios);
 
     var codigos = [
-        "auteria", "spectra", "airtex", "carter", "kem", "performance", "beru", "uniflow", "cartek", "wells",
-        "standard", "tomco", "ds", "indebrass", "jinjia", "bosch", "delphi", "acdelco", "walbro", "zhz",
-        "wincan_achr", "serva", "injetech_ciosa", "apymsa"
+        "spectra", "airtex", "carter", "kem", "performance", "beru", "uniflow", "cartek", "wells", "standard", 
+        "tomco", "bosch", "delphi", "acdelco", "walbro", "serva", "injetech_ciosa", "apymsa", "tr", "cardone", 
+        "dorman"
     ];
     var acodigos = autoparte.codigos.split("@");
     for (var indx=0; indx<acodigos.length; indx++) {

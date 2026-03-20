@@ -18,8 +18,6 @@ public class AutoparteDAO implements DatabaseRecord, java.io.Serializable {
     public String litros = "";
     public String volts = "";
     public String amperaje = "";
-    public String agrupador = "";
-    public String origen = "";
 
     public AutoparteDAO() {
     }
