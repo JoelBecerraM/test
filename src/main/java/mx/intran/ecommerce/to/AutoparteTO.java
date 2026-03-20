@@ -22,6 +22,8 @@ public class AutoparteTO {
     public String litros = "";
     public String volts = "";
     public String amperaje = "";
+    public String agrupador = "";
+    public String origen = "";
     public BigDecimal pre_naranja = BigDecimal.ZERO;
     public BigDecimal pre_verde = BigDecimal.ZERO;
     public BigDecimal pre_morada = BigDecimal.ZERO;

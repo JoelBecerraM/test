@@ -69,31 +69,31 @@ public class AgregaAutoparteAlCarritoCommand implements WebCommandInterface {
             switch(usuarioTO.lista) {
                 default:
                 case "pre_naranja":
-                    precio = autoparteTO.pre_naranja;
+                    precio = autoparteTO.pre_naranja.doubleValue();
                     break;
                 case "pre_verde":
-                    precio = autoparteTO.pre_verde;
+                    precio = autoparteTO.pre_verde.doubleValue();
                     break;
                 case "pre_morada":
-                    precio = autoparteTO.pre_morada;
+                    precio = autoparteTO.pre_morada.doubleValue();
                     break;
                 case "pre_azul":
-                    precio = autoparteTO.pre_azul;
+                    precio = autoparteTO.pre_azul.doubleValue();
                     break;
                 case "pre_roja":
-                    precio = autoparteTO.pre_roja;
+                    precio = autoparteTO.pre_roja.doubleValue();
                     break;
                 case "pre_cafe":
-                    precio = autoparteTO.pre_cafe;
+                    precio = autoparteTO.pre_cafe.doubleValue();
                     break;
                 case "pre_rosa":
-                    precio = autoparteTO.pre_rosa;
+                    precio = autoparteTO.pre_rosa.doubleValue();
                     break;
                 case "pre_amarilla":
-                    precio = autoparteTO.pre_amarilla;
+                    precio = autoparteTO.pre_amarilla.doubleValue();
                     break;
                 case "pre_azulmarino":
-                    precio = autoparteTO.pre_azulmarino;
+                    precio = autoparteTO.pre_azulmarino.doubleValue();
                     break;
             }
             if (precio==null)
@@ -104,8 +104,8 @@ public class AgregaAutoparteAlCarritoCommand implements WebCommandInterface {
 
             if (promocion.compareTo("true")==0) {
                 // Falta seleccionar la Especial
-                if (autoparteTO.pro_normal>0.0d) {
-                    pc.precio = Numero.redondea(autoparteTO.pro_normal);
+                if (autoparteTO.pro_normal.doubleValue()>0.0d) {
+                    pc.precio = Numero.redondea(autoparteTO.pro_normal.doubleValue());
                 }
             }
 
