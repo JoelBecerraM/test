@@ -324,8 +324,8 @@ jQuery(function ($) {
             infoFiltered: "<span class=\"text-info\">(Filtrado de un total de _MAX_ entradas)</span>",
             info: "", //"Pagina <strong>_PAGE_</strong> de <strong>_PAGES_</strong>",
             paginate: {
-                first: '<i class="fa fa-angle-double-left"></i>', previous: '<i class="fa fa-angle-left"></i>',
-                next: '<i class="fa fa-angle-right"></i>', last: '<i class="fa fa-angle-double-right"></i>'}
+                first: '<i class="bx bx-first-page"></i>', previous: '<i class="bx bx-skip-previous"></i>',
+                next: '<i class="bx bx-skip-next"></i>', last: '<i class="bx bx-last-page"></i>'}
         }
     });
 
@@ -351,8 +351,8 @@ function question(msg, onConfirm, onCancel, buttonText) {
         },
         title: "Pregunta",
         showCancelButton: true,
-        confirmButtonText: "<i class=\"fa fa-check\"></i>&nbsp;&nbsp;"+buttonText[0],
-        cancelButtonText: "<i class=\"fa fa-cancel\"></i>&nbsp;&nbsp;"+buttonText[1],
+        confirmButtonText: "<i class=\"bx bx-check\"></i>&nbsp;&nbsp;"+buttonText[0],
+        cancelButtonText: "<i class=\"bx bx-x\"></i>&nbsp;&nbsp;"+buttonText[1],
         reverseButtons: true,
         focusCancel: true,
         allowOutsideClick: false,
@@ -381,7 +381,7 @@ function success(msg, onConfirm, buttonText) {
                 "swal2-popup-dark-mode" : "swal2-popup"
         },
         title: "&Eacute;xito",
-        confirmButtonText: "<i class=\"fa fa-check\"></i>&nbsp;&nbsp;"+buttonText,
+        confirmButtonText: "<i class=\"bx bx-check\"></i>&nbsp;&nbsp;"+buttonText,
         customClass: {
             confirmButton: "btn btn-success m-1"
         },
@@ -406,7 +406,7 @@ function info(msg, onConfirm, buttonText) {
                 "swal2-popup-dark-mode" : "swal2-popup"
         },
         title: "Informaci&oacute;n",
-        confirmButtonText: "<i class=\"fa fa-info\"></i>&nbsp;&nbsp;"+buttonText,
+        confirmButtonText: "<i class=\"bx bx-info-circle\"></i>&nbsp;&nbsp;"+buttonText,
         customClass: {
             confirmButton: "btn btn-info m-1"
         },
@@ -431,7 +431,7 @@ function warning(msg, onConfirm, buttonText) {
                 "swal2-popup-dark-mode" : "swal2-popup"
         },
         title: "Precauci&oacute;n",
-        confirmButtonText: "<i class=\"fa fa-exclamation\"></i>&nbsp;&nbsp;"+buttonText,
+        confirmButtonText: "<i class=\"bx bx-alarm-exclamation\"></i>&nbsp;&nbsp;"+buttonText,
         customClass: {
             confirmButton: "btn btn-warning m-1"
         },
@@ -456,7 +456,7 @@ function error(msg, onConfirm, buttonText) {
                 "swal2-popup-dark-mode" : "swal2-popup"
         },
         title: "Error",
-        confirmButtonText: "<i class=\"fa fa-cancel\"></i>&nbsp;&nbsp;"+buttonText,
+        confirmButtonText: "<i class=\"bx bx-x\"></i>&nbsp;&nbsp;"+buttonText,
         customClass: {
             confirmButton: "btn btn-danger m-1"
         },
@@ -1719,6 +1719,17 @@ function vistaComprar() {
     };
     loadPageContainer("/ecommerce/assets/pages/comprar.html", onComplete);
 }
+function vistaCargaInformacion() {
+    if (!validaPermiso("cargaInformacion"))
+        return;
+    function onComplete() {
+        function onCompleteII() {
+            initCargaInformacion();
+        };
+        loadScript("/ecommerce/assets/js/pages/carga-informacion.js", onCompleteII);
+    };
+    loadPageContainer("/ecommerce/assets/pages/carga-informacion.html", onComplete);
+}
 function vistaAdminClientes() {
     if (!validaPermiso("administracion"))
         return;
@@ -1913,7 +1924,7 @@ var categoria_li =
     </li>';
 
 var images_producto =
-    '<div class="row">\
+    '<div class="row mb-4">\
            <figure class="img-fluid zoom" id="foto-zoom" onmouseout="restorezoom(this);" onmousemove="zoom(event, gi(\'image\'));">\
             <img onerror="this.src=\'/ecommerce/assets/img/products/products-8.jpg\'" src="/intran/fotos/grandes/@noparte@.png" id="image">\
         </figure>\
