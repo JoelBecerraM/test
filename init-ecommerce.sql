@@ -1,5 +1,9 @@
 
+DECLARE @compania varchar(20);
+
 set @compania = '1000';
+GO
+
 set @pais = '01';
 
 SET GLOBAL local_infile=1;
