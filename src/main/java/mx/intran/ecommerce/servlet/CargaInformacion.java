@@ -119,6 +119,14 @@ public class CargaInformacion extends HttpServlet {
             CargaCatalogoBusiness cargaInformacionBusiness = new CargaCatalogoBusiness();
             if (tipo.compareTo("cargaPedido")==0)
                 cargaInformacionTO = cargaInformacionBusiness.cargaPedido(sesion, usuarioTO, ds, compania, usuario, data);
+            else if (tipo.compareTo("cargaCatalogo")==0)
+                cargaInformacionTO = cargaInformacionBusiness.cargaCatalogo(ds, compania, usuario, data);
+            else if (tipo.compareTo("cargaClientes")==0)
+                cargaInformacionTO = cargaInformacionBusiness.cargaClientes(ds, compania, usuario, data);
+            else if (tipo.compareTo("cargaPrecios")==0)
+                cargaInformacionTO = cargaInformacionBusiness.cargaPrecios(ds, compania, usuario, data);
+            else if (tipo.compareTo("cargaPromociones")==0)
+                cargaInformacionTO = cargaInformacionBusiness.cargaPromociones(ds, compania, usuario, data);
 
             log.debug(Reflector.toStringAllFields(cargaInformacionTO));
 

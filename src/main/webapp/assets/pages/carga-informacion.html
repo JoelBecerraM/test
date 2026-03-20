@@ -1,0 +1,120 @@
+<!-- Start Page Banner -->
+<!-- div class="page-banner-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-banner-content">
+                    <h2>Carga Informaci&oacute;n</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div -->
+<!-- End Page Banner -->
+
+<!-- Start Admin Carga Informacion Area -->
+<section class="cart-area ptb-100">
+    <div class="container">
+        <div class="row mb-4" id="div-promociones">
+            <h3>Promociones</h3>
+            <form id="form-promociones" novalidate action="CargaInformacion">
+                <input type="hidden" name="compania">
+                <input type="hidden" name="usuario">
+                <input type="hidden" name="tipo" value="cargaPromociones">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label>Archivo:</label>
+                            <input type="file" name="archivo" id="archivo" class="form-control" required placeholder="Archivo"
+                                   data-error="Por favor ingrese el archivo.">
+                            <div class="help-block with-errors mt-1 h6 text-danger"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="default-btn">
+                            <i class="bx bx-upload fs-5"></i> Procesar Archivo
+                        </button>
+                        <div id="msgSubmit-promociones" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row mb-4" id="div-precios">
+            <h3>Lista de Precios</h3>
+            <form id="form-precios" novalidate action="CargaInformacion">
+                <input type="hidden" name="compania">
+                <input type="hidden" name="usuario">
+                <input type="hidden" name="tipo" value="cargaPrecios">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label>Archivo:</label>
+                            <input type="file" name="archivo" id="archivo" class="form-control" required placeholder="Archivo"
+                                   data-error="Por favor ingrese el archivo.">
+                            <div class="help-block with-errors mt-1 h6 text-danger"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="default-btn">
+                            <i class="bx bx-upload fs-5"></i> Procesar Archivo
+                        </button>
+                        <div id="msgSubmit-precios" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row mb-4" id="div-clientes">
+            <h3>Cat&aacute;logo de Clientes</h3>
+            <form id="form-clientes" novalidate action="CargaInformacion">
+                <input type="hidden" name="compania">
+                <input type="hidden" name="usuario">
+                <input type="hidden" name="tipo" value="cargaClientes">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label>Archivo:</label>
+                            <input type="file" name="archivo" id="archivo" class="form-control" required placeholder="Archivo"
+                                   data-error="Por favor ingrese el archivo.">
+                            <div class="help-block with-errors mt-1 h6 text-danger"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="default-btn">
+                            <i class="bx bx-upload fs-5"></i> Procesar Archivo
+                        </button>
+                        <div id="msgSubmit-clientes" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row mb-4" id="div-catalogo">
+            <h3>Cat&aacute;logo de Productos</h3>
+            <form id="form-catalogo" novalidate action="CargaInformacion">
+                <input type="hidden" name="compania">
+                <input type="hidden" name="usuario">
+                <input type="hidden" name="tipo" value="cargaCatalogo">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label>Archivo:</label>
+                            <input type="file" name="archivo" id="archivo" class="form-control" required placeholder="Archivo"
+                                   data-error="Por favor ingrese el archivo.">
+                            <div class="help-block with-errors mt-1 h6 text-danger"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="default-btn">
+                            <i class="bx bx-upload fs-5"></i> Procesar Archivo
+                        </button>
+                        <div id="msgSubmit-catalogo" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- End Admin Carga Informacion Area -->
