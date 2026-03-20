@@ -87,7 +87,6 @@ CREATE TABLE Autoparte (compania varchar(20) not null, noparte varchar(20) not n
 	descripcionlarga varchar(600) not null, codigos varchar(400) not null, familia varchar(40) not null, linea varchar(40) not null, 
 	sistema varchar(40) not null, resistencia varchar(40) not null, otros varchar(40) not null, oem varchar(40) not null, 
 	presion varchar(20) not null, litros varchar(20) not null, volts varchar(20) not null, amperaje varchar(20) not null, 
-	agrupador varchar(20) not null, origen varchar(20) not null,
 	PRIMARY KEY (compania, noparte)
 	);
 CREATE INDEX Autoparte_INDX1 ON Autoparte (descripcion);

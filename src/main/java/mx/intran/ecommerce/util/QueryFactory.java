@@ -9,7 +9,7 @@ public class QueryFactory {
     public String getQueryAutopartesValor(String compania, String noparte, String valor) {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT a.compania, a.noparte, a.descripcion, a.descripcionlarga, a.codigos, a.familia, a.linea, a.sistema, ")
-            .append("a.resistencia, a.otros, a.oem, a.presion, a.litros, a.volts, a.amperaje, a.agrupador, a.origen, ")
+            .append("a.resistencia, a.otros, a.oem, a.presion, a.litros, a.volts, a.amperaje, ")
             .append("lp.pre_naranja, lp.pre_verde, lp.pre_morada, lp.pre_azul, lp.pre_roja, lp.pre_cafe, lp.pre_rosa, lp.pre_amarilla, lp.pre_azulmarino, ")
             .append("lp.pro_normal, lp.pro_especial, i.existencia ")
             .append("FROM Autoparte a ")
@@ -31,7 +31,7 @@ public class QueryFactory {
     public String getQueryAutopartesAplicacion(String compania, String anio, String marca, String modelo, String motor, String linea) {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT au.compania, au.noparte, au.descripcion, au.descripcionlarga, au.codigos, au.familia, au.linea, au.sistema, ")
-            .append("au.resistencia, au.otros, au.oem, au.presion, au.litros, au.volts, au.amperaje, au.agrupador, au.origen, ")
+            .append("au.resistencia, au.otros, au.oem, au.presion, au.litros, au.volts, au.amperaje, ")
             .append("lp.pre_naranja, lp.pre_verde, lp.pre_morada, lp.pre_azul, lp.pre_roja, lp.pre_cafe, lp.pre_rosa, lp.pre_amarilla, lp.pre_azulmarino, ")
             .append("lp.pro_normal, lp.pro_especial, i.existencia ")
             .append("FROM Aplicacion a INNER JOIN Autoparte au ON a.compania = au.compania AND a.noparte = au.noparte ")
@@ -56,7 +56,7 @@ public class QueryFactory {
     public String getQueryAutoparte(String compania, String noparte) {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT a.compania, a.noparte, a.descripcion, a.descripcionlarga, a.codigos, a.familia, a.linea, a.sistema, ")
-            .append("a.resistencia, a.otros, a.oem, a.presion, a.litros, a.volts, a.amperaje, a.agrupador, a.origen, ")
+            .append("a.resistencia, a.otros, a.oem, a.presion, a.litros, a.volts, a.amperaje, ")
             .append("lp.pre_naranja, lp.pre_verde, lp.pre_morada, lp.pre_azul, lp.pre_roja, lp.pre_cafe, lp.pre_rosa, lp.pre_amarilla, lp.pre_azulmarino, ")
             .append("lp.pro_normal, lp.pro_especial, i.existencia ")
             .append("FROM Autoparte a ")
@@ -72,7 +72,7 @@ public class QueryFactory {
     public String getQueryRelacionados(String compania, String noparte) {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT a.compania, a.noparte, a.descripcion, a.descripcionlarga, a.codigos, a.familia, a.linea, a.sistema, ")
-            .append("a.resistencia, a.otros, a.oem, a.presion, a.litros, a.volts, a.amperaje, a.agrupador, a.origen, ")
+            .append("a.resistencia, a.otros, a.oem, a.presion, a.litros, a.volts, a.amperaje, ")
             .append("lp.pre_naranja, lp.pre_verde, lp.pre_morada, lp.pre_azul, lp.pre_roja, lp.pre_cafe, lp.pre_rosa, lp.pre_amarilla, lp.pre_azulmarino, ")
             .append("lp.pro_normal, lp.pro_especial, i.existencia ")
             .append("FROM Relacionado r INNER JOIN Autoparte a ON r.compania = a.compania AND r.noparterel = a.noparte ")

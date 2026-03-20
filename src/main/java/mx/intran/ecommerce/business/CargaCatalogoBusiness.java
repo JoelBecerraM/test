@@ -584,9 +584,9 @@ public class CargaCatalogoBusiness {
                 cargaInformacionTO.agregaError("En el renglon ["+(row.getRowNum()+1)+"] family no tiene valor.");
                 continue;
             }
-            String line = getCellValue(row.getCell(indx++));
-            if (line==null) {
-                cargaInformacionTO.agregaError("En el renglon ["+(row.getRowNum()+1)+"] line no tiene valor.");
+            String agrupador = getCellValue(row.getCell(indx++));
+            if (agrupador==null) {
+                cargaInformacionTO.agregaError("En el renglon ["+(row.getRowNum()+1)+"] agrupador no tiene valor.");
                 continue;
             }
             String make = getCellValue(row.getCell(indx++));
@@ -643,12 +643,6 @@ public class CargaCatalogoBusiness {
             String volts = getCellValue(row.getCell(indx++));
             String amperaje = getCellValue(row.getCell(indx++));
 
-            String agrupador = getCellValue(row.getCell(indx++));
-            if (agrupador==null) {
-                agrupador = "";
-            //    cargaInformacionTO.agregaError("En el renglon ["+(row.getRowNum()+1)+"] agrupador no tiene valor.");
-            //    continue;
-            }
             String origen = getCellValue(row.getCell(indx++));
             if (origen==null) {
                 origen = "";
@@ -663,7 +657,7 @@ public class CargaCatalogoBusiness {
             }
 
             ArrayList<String> codigos = new ArrayList();
-            for (int k=0; k<24; k++) {
+            for (int k=0; k<21; k++) {
                 String codigo = emptyIsNull(getCellValue(row.getCell(indx++)));
                 codigos.add(codigo);
             }
@@ -680,13 +674,13 @@ public class CargaCatalogoBusiness {
                 ds.insert(familiaDAO);
             }
 
-            LineaDAO lineaDAO = (LineaDAO)ds.first(new LineaDAO(), "compania = '"+compania+"' AND descripcion = '"+line+"'");
+            LineaDAO lineaDAO = (LineaDAO)ds.first(new LineaDAO(), "compania = '"+compania+"' AND descripcion = '"+agrupador+"'");
             if (lineaDAO==null) {
                 lineaDAO = new LineaDAO();
                 lineaDAO.compania = compania;
                 Integer id = (Integer)ds.aggregate(lineaDAO, "MAX", "linea");
                 lineaDAO.linea = (id==null? 0 : id.intValue()) + 1;
-                lineaDAO.descripcion = line;
+                lineaDAO.descripcion = agrupador;
 
                 ds.insert(lineaDAO);
             }
@@ -820,7 +814,7 @@ public class CargaCatalogoBusiness {
             boolean existe = ds.exists(autoparteDAO);
 
             autoparteDAO.familia = emptyIsNull(family);
-            autoparteDAO.linea = emptyIsNull(line);
+            autoparteDAO.linea = emptyIsNull(agrupador);
             autoparteDAO.sistema = emptyIsNull(system);
             autoparteDAO.resistencia = emptyIsNull(resistance);
             autoparteDAO.otros = emptyIsNull(others);
